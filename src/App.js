@@ -19,8 +19,10 @@ export const App = () => {
         expertise={expertise}
       />
       <main>
-        <div>Here will my main content be added.</div>
-        <Button className="button-green" text="Green" />
+        <div> Here will my main content be added.</div>
+        <div className="tooltip" data-tooltip="This is my tooltip">
+          <Button className="button-green" text="Green" />
+        </div>
         <Button className="button-blue" text="Blue" />
       </main>
       <Footer
