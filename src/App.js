@@ -1,12 +1,13 @@
-import React from "react";
-import { Header } from "./Header";
-import { Footer } from "./Footer";
+import React from 'react';
+import { Header } from './Header';
+import { Footer } from './Footer';
+import { Button } from './Button';
 
-const name = "Ylva Nilsson";
-const profession = "frontend developer";
-const expertise = "QA";
-const phoneNumber = "+46 70 347 47 99";
-const email = "ylva.nilsson75@gmail.com";
+const name = 'Ylva Nilsson';
+const profession = 'frontend developer';
+const expertise = 'QA';
+const phoneNumber = '+46 70 347 47 99';
+const email = 'ylva.nilsson75@gmail.com';
 
 export const App = () => {
   return (
@@ -19,6 +20,8 @@ export const App = () => {
       />
       <main>
         <div>Here will my main content be added.</div>
+        <Button className="button-green" text="Green" />
+        <Button className="button-blue" text="Blue" />
       </main>
       <Footer
         title="Contacts"

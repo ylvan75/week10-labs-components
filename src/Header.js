@@ -1,5 +1,5 @@
-import React from "react";
-import { ProfileImage } from "./ProfileImage";
+import React from 'react';
+import { ProfileImage } from './ProfileImage';
 
 export const Header = ({ title, name, profession, expertise }) => {
   return (
