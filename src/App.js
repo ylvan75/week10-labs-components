@@ -2,6 +2,7 @@ import React from 'react';
 import { Header } from './Header';
 import { Footer } from './Footer';
 import { Button } from './Button';
+import { Tooltip } from './Tooltip';
 
 const name = 'Ylva Nilsson';
 const profession = 'frontend developer';
@@ -20,7 +21,11 @@ export const App = () => {
       />
       <main>
         <div> Here will my main content be added.</div>
-        <div className="tooltip" data-tooltip="This is my tooltip">
+        <p className="tooltip">
+          Let's hover over me!
+          <Tooltip className="tooltiptext" tooltiptext="I'm a tooltip" />
+        </p>
+        <div className="tooltip-test" data-tooltip="This is my tooltip">
           <Button className="button-green" text="Green" />
         </div>
         <Button className="button-blue" text="Blue" />

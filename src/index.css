@@ -20,7 +20,7 @@ code {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 500px;
+  height: 300px;
   background-color: turquoise;
   position: relative;
 }
@@ -69,7 +69,8 @@ code {
   color: white;
 }
 
-.tooltip:hover:before {
+/* Tooltip with using attribute data-tooltip */
+.tooltip-test:hover:before {
   content: attr(data-tooltip);
   position: absolute;
   padding: 5px 10px;
@@ -79,7 +80,7 @@ code {
   border-radius: 3px;
 }
 
-.tooltip:hover:after {
+.tooltip-test:hover:after {
   content: '';
   position: absolute;
   margin: 38px 0 0 -20px;
@@ -88,6 +89,45 @@ code {
   border-top: 5px solid transparent;
   border-right: 10px solid orange;
   border-bottom: 5px solid transparent;
+}
+
+/* Tooltip using <span> */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+/* Bottom arrow */
+.tooltip .tooltiptext::after {
+  content: ' ';
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }
 
 .footer {
